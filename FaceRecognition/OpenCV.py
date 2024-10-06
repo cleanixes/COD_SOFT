@@ -1,8 +1,8 @@
 import cv2
 
-def draw_boundary(img, classifier, scaleFactor, minNeigh, color, text):
+def draw_boundary(img, classifier, scaleFactor, minNeighbors, color, text):
     gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    feautres = classifier.detectMultiScale
+    feautres = classifier.detectMultiScale(gray_img, scaleFactor, minNeighbors)
 
 
 
